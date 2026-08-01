@@ -5,7 +5,7 @@ const works = [
     cn: "《循迹清障，看见所需》",
     descEn: "Dami follows the maze’s curves and removes each hedge obstacle at its source, gradually revealing a clear and continuous journey for the customer. The work embodies the discipline of seeing friction from the customer’s perspective, understanding where the experience becomes difficult, and staying with the problem until the path is truly open.",
     descCn: "大米沿迷宫弯道持续清除绿植障碍，让客户前方的道路逐渐清晰、完整、畅通。作品强调从客户视角发现体验中的真实阻碍，并沿着问题的结构深入处理，直到障碍被彻底解决。",
-    art: "./artworks/01-see-through.png", shot: "./screenshots/01-see-through.png",
+    art: "./artworks/01-see-through.png", shot: "./screenshots/01-see-through.png", video: "./videos/01-see-through.mp4", videoType: "video/mp4",
     prompts: [
       ["Initial concept · 首次生成", "横向 3:2 企业文化壁纸，阳光明亮、绿意茂盛的大型庭院迷宫几乎铺满画面。大米位于左侧，推着专业步进式除草机沿迷宫墙工作；黑人女性顾客推着购物车站在右侧入口附近。两者隔着合理距离相互配合，共同让客户旅程变得简单、清楚、畅通。"],
       ["Key composition · 中间关键环节", "提高俯拍角度，控制迷宫道路数量，保留数个宽阔而清晰的弯道。大米和顾客之间仍有多段尚未清除的迷宫墙，顾客双手自然放在购物车上。英文 SEE THROUGH THE CUSTOMER’S EYES 不换行，顺着最大弯道排版，像平印在草地上，大小贴合弯道。"],
@@ -17,7 +17,7 @@ const works = [
     en: "Where Hearts Meet", cn: "《心意相触，彼此相通》",
     descEn: "Dami and Xiaomi meet across a luminous California coastline, gently extending their fingertips toward one another. Their warm gaze turns empathy into a visible bridge, while the Yami ripple below suggests that understanding begins with listening, travels across difference, and becomes the force that connects people.",
     descCn: "大米与小米在明亮温暖的加州海岸相对而立，温和注视彼此，并将指尖轻轻伸向对方。二者之间尚未完全接触的距离，让共情成为主动理解与靠近的过程；水面汇聚的亚米涟漪，象征理解从倾听出发，跨越差异并连接彼此。",
-    art: "./artworks/02-empathy.png", shot: "./screenshots/02-empathy.png",
+    art: "./artworks/02-empathy.png", shot: "./screenshots/02-empathy.png", video: "./videos/02-empathy.mp4", videoType: "video/mp4",
     prompts: [
       ["Initial concept · 首次生成", "横向 3:2 企业文化壁纸。大米与小米在明亮温暖的云端相对而立，面容轻松温和，彼此注视；双方伸出食指，指尖互相靠近但尚未接触。画面具有金色晨光、柔和云层与开阔空间，人物和英文标题排版协调、优雅。"],
       ["Key composition · 中间关键环节", "大米位于左侧，小米位于右侧，两者处于同一水平线、距离镜头远近一致，形成稳定对称关系。丰富背景层次，加入加州西海岸的群山、城市、海湾、公路、棕榈树与粉金色天空。夕阳从两根食指之间穿过，画面温暖明亮。"],
@@ -29,7 +29,7 @@ const works = [
     en: "Driven Beyond the Finish", cn: "《迎风疾驰，永不止步》",
     descEn: "Dami leans into a demanding downhill turn on California’s coast, driving forward with total focus as dust, gravel, and the pursuing field trail behind. The living-green title rises from the landscape itself, transforming relentless drive into a world where determination is not a single heroic moment, but the choice to keep accelerating beyond every limit.",
     descCn: "加州海岸的明亮山路上，大米全身前倾，以紧张专注的姿态全速冲过下坡弯道，身后扬起尘土与碎石，追赶者仍在奋力前进。巨大的绿植文字从环境中生长出来，将“拼尽全力”化为持续加速、不断超越边界的视觉力量。",
-    art: "./artworks/03-relentless.png", shot: "./screenshots/03-relentless.png",
+    art: "./artworks/03-relentless.png", shot: "./screenshots/03-relentless.png", video: "./videos/03-relentless.mp4", videoType: "video/mp4",
     prompts: [
       ["Initial concept · 首次生成", "横向 3:2，自行车越野赛的激烈瞬间。大米作为领先车手冲在最前方，穿红色骑行上衣，位置、动作和速度感都表现出全速前进；身后是多位形象各异的毛绒参赛者。环境明亮热烈，避免暗色调。"],
       ["Key composition · 中间关键环节", "场景设在加州西海岸的山地赛道，加入海岸线、公路、棕榈树、野花和明亮蓝天。大米高速冲出下坡弯道，车轮扬起连续尘土、碎石和清晰轮迹，身后选手被明显拉开。标题 RELENTLESS DRIVE 像巨型绿植地景一样生长在山坡上，成为环境的一部分。"],
@@ -41,7 +41,7 @@ const works = [
     en: "Beyond the Fold", cn: "《破界入微，折路成途》",
     descEn: "Inside a vast architecture of layered paper, Dami studies the hidden logic of a fold while Xiaomi examines the smallest clue through a magnifying glass. Opened paper walls become a road toward the California coast, expressing a way of solving that combines expansive imagination with precise, patient investigation.",
     descCn: "层层折纸构成巨大的问题结构，大米专注寻找隐藏折痕的关键节点，小米则用放大镜观察细微线索。已经打开的纸墙折叠成通往加州海岸的道路，象征突破边界的想象力与深入问题的精准探索共同作用，让限制转化为路径。",
-    art: "./artworks/04-think-beyond.png", shot: "./screenshots/04-think-beyond.png",
+    art: "./artworks/04-think-beyond.png", shot: "./screenshots/04-think-beyond.png", video: "./videos/04-think-beyond.mp4", videoType: "video/mp4",
     prompts: [
       ["Initial concept · 首次生成", "横向 3:2，巨大的多层折纸结构铺满画面，五至七圈具有明显厚度的同心环形纸墙围绕中心。长绒大米从中心向右侧前进，站在尚未完全打开的墙面前，一只手扶住纸层，另一只手沿隐藏折痕寻找关键节点，神情专注、平静、好奇。"],
       ["Key exploration · 中间关键环节", "已经突破的两至三层纸墙沿正确折线向两侧打开，并向下折成连续道路与台阶；外层结构更加复杂，带有很浅的循环箭头、重复路线、方格和旧方案痕迹，但没有可读文字。大米脚边的小米拿着放大镜，认真观察折纸的纤维、图案与细小折痕。"],
@@ -53,7 +53,7 @@ const works = [
     en: "Take the Shot, Own the Outcome", cn: "《一脚定局，全程担当》",
     descEn: "Dami takes the decisive shot, Xiaomi follows the play, and the goalkeeper gives their all—each fully committed to their role. Set across a bright green pitch, the scene embodies doing what is right, taking ownership from action through result, and striving together toward a shared goal.",
     descCn: "大米果断射门，小米同步跟进，守门员也全力以赴，共同构成专注投入、各尽其责的关键时刻。作品以明亮绿茵场为舞台，诠释坚持正确行动、主动承担从过程到结果的责任，并为共同目标全力以赴。",
-    art: "./artworks/05-own-outcome.png", shot: "./screenshots/05-own-outcome.png",
+    art: "./artworks/05-own-outcome.png", shot: "./screenshots/05-own-outcome.png", video: "./videos/05-own-outcome.mp4", videoType: "video/mp4",
     prompts: [
       ["Initial concept · 首次生成", "横向 3:2，明亮绿茵场的高角度俯拍。大米位于左下方，在禁区外完成一次强力射门；足球离地飞向右上方球门，守门员全力扑救。画面富有冲击力、光影和故事感，角色球服不倾向任何真实球队。"],
       ["Key composition · 中间关键环节", "保持俯拍构图和明亮草地色调。英文 DO WHAT’S RIGHT, OWN THE OUTCOME 使用纯色扁平的高窄粗体，像球场标记一样平印在靠近球门的草地上，与球场透视和草叶纹理融合。大米穿红色球服与撞色球袜，小米穿同款球服从侧后方跑来，视线看向足球。"],
@@ -65,7 +65,7 @@ const works = [
     en: "Fast in Flight, Together in Purpose", cn: "《并翼疾行，同程共达》",
     descEn: "Dami and Xiaomi pilot two Yami flying delivery vehicles through luminous sunset clouds above a California boulevard. Their parallel paths, synchronized speed, and generous cargo capacity turn fast movement into coordinated service—showing that the strongest acceleration happens when a team advances in rhythm toward the same destination.",
     descCn: "大米与小米分别驾驶亚米飞行货车，穿越粉金色云层，共同掠过加州日落大道。两条平行航线、同步速度和充足货舱，将“快”转化为高效协作的服务能力：真正有力量的加速，来自团队保持同一节奏、朝同一目标并肩前进。",
-    art: "./artworks/06-move-together.png", shot: "./screenshots/06-move-together.png",
+    art: "./artworks/06-move-together.png", shot: "./screenshots/06-move-together.png", video: "./videos/06-move-together.mp4", videoType: "video/mp4",
     prompts: [
       ["Flying delivery concept · 飞行配送创意", "横向 3:2，明亮粉金色的加州日落。大米与小米各驾驶一辆造型独特的红白飞行货车，车身印亚米 Logo，并肩穿越云层；下方是棕榈树、城市街区、海岸与美丽的日落大道。画面轻快、温暖、有协作感。"],
       ["Speed & capacity refinement · 速度与运力优化", "保持两辆飞车在画面中的占比。放大并加长货舱，使其具备商业配送运力；两侧云层形成明显向后掠去的线性模糊和光轨。大米小米绒毛略加长并被风吹向后方，边缘有金色轮廓光。标题使用系列统一的高窄粗体，并向下移动以保留顶部安全距离。"]
@@ -75,14 +75,36 @@ const works = [
 
 const tabs = [...document.querySelectorAll(".tab")], visual = document.querySelector(".visual");
 const art = document.querySelector("#artwork"), shot = document.querySelector("#screenshot");
+const screenshotShell = document.querySelector(".screenshot");
+const video = document.querySelector("#culture-video"), videoSource = document.querySelector("#video-source");
+const videoShell = document.querySelector(".video-shell");
 let active = 0;
+function loadImage(img, shell, src, alt) {
+  shell.classList.add("loading");
+  img.style.visibility = "hidden";
+  const reveal = () => {
+    img.style.visibility = "visible";
+    shell.classList.remove("loading");
+  };
+  img.onload = reveal;
+  img.onerror = reveal;
+  img.alt = alt;
+  img.src = src;
+  if (img.complete) requestAnimationFrame(reveal);
+}
 function render(index, initial=false) {
   active = (index + works.length) % works.length;
   const w = works[active];
   if (!initial) visual.classList.add("changing");
   const update = () => {
-    art.src=w.art; art.alt=`${w.en} — Yami culture wallpaper`;
-    shot.src=w.shot; shot.alt=`Final generation screenshot for ${w.en}`;
+    loadImage(art, visual, w.art, `${w.en} — Yami culture wallpaper`);
+    loadImage(shot, screenshotShell, w.shot, `Final generation screenshot for ${w.en}`);
+    video.pause();
+    videoShell.classList.add("loading");
+    video.poster = w.art;
+    videoSource.src = w.video;
+    videoSource.type = w.videoType;
+    video.load();
     document.querySelector("#counter").textContent=`${String(active+1).padStart(2,"0")} / 06`;
     document.querySelector("#value").textContent=w.value;
     document.querySelector("#title-en").textContent=w.en;
@@ -100,5 +122,8 @@ function render(index, initial=false) {
 tabs.forEach(t=>t.addEventListener("click",()=>render(Number(t.dataset.index))));
 document.querySelector("#prev").addEventListener("click",()=>render(active-1));
 document.querySelector("#next").addEventListener("click",()=>render(active+1));
+video.addEventListener("loadeddata",()=>videoShell.classList.remove("loading"));
+video.addEventListener("canplay",()=>videoShell.classList.remove("loading"));
+video.addEventListener("error",()=>videoShell.classList.remove("loading"));
 document.addEventListener("keydown",e=>{if(e.key==="ArrowLeft")render(active-1);if(e.key==="ArrowRight")render(active+1)});
 render(0,true);

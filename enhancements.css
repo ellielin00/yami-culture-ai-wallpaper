@@ -1,0 +1,212 @@
+.mascot-thinking {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #241b18 0%, #171515 58%, #151515 100%);
+}
+
+.mascot-thinking::after {
+  content: "";
+  position: absolute;
+  width: 32vw;
+  height: 32vw;
+  right: -8vw;
+  bottom: -12vw;
+  border: 1px solid rgba(255, 179, 106, .22);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6vw rgba(255, 179, 106, .025), 0 0 0 12vw rgba(241, 42, 34, .025);
+  pointer-events: none;
+}
+
+.thinking-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.18fr .82fr;
+  gap: 6vw;
+  align-items: start;
+}
+
+.thinking-visual {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 52px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: #eee7de;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .28);
+}
+
+.thinking-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.thinking-lead {
+  font-size: clamp(17px, 1.45vw, 23px);
+  line-height: 1.55;
+  letter-spacing: normal;
+}
+
+.thinking-lead p { margin: 0 0 24px; }
+.thinking-lead strong { color: var(--warm); }
+
+.thinking-quote {
+  padding: 30px 0 0;
+  border-top: 1px solid var(--line);
+  color: #fff;
+  font-weight: 650;
+}
+
+.thinking-zh {
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .035);
+  color: #bbb3ab;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.thinking-zh p { margin: 0 0 18px; }
+.thinking-zh p:last-child { margin-bottom: 0; }
+
+.film {
+  grid-column: 1 / -1;
+  padding: 34px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 179, 106, .35);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(241, 42, 34, .14), rgba(255, 179, 106, .055) 44%, var(--panel));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, .28);
+}
+
+.film > header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.film small {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--warm);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+}
+
+.film h3 {
+  margin: 0;
+  font-size: clamp(31px, 4vw, 58px);
+  line-height: .95;
+  letter-spacing: -.05em;
+}
+
+.film header p {
+  max-width: 660px;
+  margin: 14px 0 0;
+  color: #c9c2ba;
+  line-height: 1.6;
+}
+
+.film header > span {
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 179, 106, .35);
+  border-radius: 999px;
+  color: var(--warm);
+  font: 800 10px/1 monospace;
+  letter-spacing: .12em;
+  white-space: nowrap;
+}
+
+.video-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #090909;
+  aspect-ratio: 16 / 9;
+}
+
+.video-shell video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #090909;
+}
+
+.media-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: linear-gradient(120deg, #171717, #211d1a, #171717);
+  color: #bcb4ac;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .22s;
+}
+
+.loading > .media-loading {
+  opacity: 1;
+  visibility: visible;
+}
+
+.media-loading i {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(255, 255, 255, .14);
+  border-top-color: var(--warm);
+  border-radius: 50%;
+  animation: media-spin .8s linear infinite;
+}
+
+.visual.loading img,
+.screenshot.loading img { visibility: hidden; }
+
+.screenshot {
+  position: relative;
+  min-height: 300px;
+}
+
+.screenshot .media-loading { min-height: 300px; }
+
+@keyframes media-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+  .thinking-grid { grid-template-columns: 1fr; }
+  .film > header { align-items: start; }
+  .film header > span { display: none; }
+}
+
+@media (max-width: 600px) {
+  .thinking-visual { margin-bottom: 34px; border-radius: 17px; }
+  .thinking-lead { font-size: 17px; }
+  .thinking-zh,
+  .film {
+    padding: 24px;
+    border-radius: 17px;
+  }
+  .film > header { display: block; }
+  .film h3 { font-size: 38px; }
+  .video-shell { border-radius: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media-loading i { animation: none; }
+}

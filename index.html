@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yami Culture AI Wallpaper — Erin Lin</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./enhancements.css">
 </head>
 <body>
   <header class="topbar">
@@ -21,6 +22,29 @@
       <div class="credits">
         <article class="credit"><img class="avatar" src="./assets/erin-lin.png" alt="Erin Lin"><div><small>Created & directed by</small><strong>Erin Lin</strong><span>Concept · Art Direction · Iteration</span></div></article>
         <article class="credit"><b class="tool-icon"><img src="./assets/chatgpt-icon.svg" alt=""></b><div><small>AI tool</small><strong>ChatGPT</strong><span>Ideation · Prompting · Production archive</span></div></article>
+      </div>
+    </section>
+
+    <section class="mascot-thinking shell">
+      <div class="section-heading">
+        <div><p class="eyebrow">Why Dami & Xiaomi</p><h2>Making Culture<br>Felt & Remembered</h2><p class="zh-heading">为什么由大米与小米演绎企业文化</p></div>
+        <p>One character system carries six values across image, motion, emotion, and sound—turning culture into a distinctive Yami experience.</p>
+      </div>
+      <figure class="thinking-visual">
+        <img src="./assets/dami-xiaomi-emotions.png" alt="Dami and Xiaomi expressing gentle, charming, focused, and striving character moods">
+      </figure>
+      <div class="thinking-grid">
+        <div class="thinking-lead">
+          <p>Soft, rounded, and universally appealing—they fit naturally into scenes like competition, travel, and exploration, with expressions that bring corporate culture to life.</p>
+          <p>Each video closes with Yami's signature soft sound cue, reinforcing auditory recall.</p>
+          <p class="thinking-quote">Visuals to see, sound to hear—fully unlocking the IP's versatility so this character identity delivers lasting value, shaping internal culture and telling our brand's story to the world.</p>
+        </div>
+        <div class="thinking-zh">
+          <p>壁纸以「大米」「小米」为主角：</p>
+          <p>软萌圆润的形象既契合核心用户审美，又不受年龄、族裔限制，可自然融入竞技、远行、探索等场景，搭配多样情绪演绎，让抽象企业文化具象可感。</p>
+          <p>每个视频以软萌的 Yami 专属音效结尾，强化听觉记忆。</p>
+          <p>看得见的画面、听得见的声音，全方位挖掘 IP 的可塑性，也让该形象在对内文化落地、对外品牌宣传中，释放长效价值。</p>
+        </div>
       </div>
     </section>
 
@@ -49,10 +73,23 @@
         <button class="tab" data-index="5"><span>06</span>Move Together</button>
       </nav>
       <article class="stage" aria-live="polite">
-        <div class="visual"><img id="artwork" src="./artworks/01-see-through.png" alt=""><span id="counter">01 / 06</span></div>
+        <section class="film">
+          <header><div><small>Watch the culture story</small><h3>From wallpaper to motion</h3><p>Play the short film first—the value is revealed through action, then sealed with Yami's signature sound.</p></div><span>VIDEO · SOUND ON</span></header>
+          <div class="video-shell loading">
+            <video id="culture-video" controls playsinline preload="metadata" poster="./artworks/01-see-through.png">
+              <source id="video-source" src="./videos/01-see-through.mp4" type="video/mp4">
+            </video>
+            <div class="video-loading media-loading" aria-hidden="true"><i></i><span>Loading film</span></div>
+          </div>
+        </section>
+        <div class="visual loading">
+          <img id="artwork" src="./artworks/01-see-through.png" alt="">
+          <div class="media-loading artwork-loading" aria-hidden="true"><i></i><span>Loading artwork</span></div>
+          <span id="counter">01 / 06</span>
+        </div>
         <div class="story"><p id="value" class="value"></p><h3 id="title-en"></h3><p id="title-cn" class="title-cn"></p><p id="desc-en"></p><p id="desc-cn" class="zh"></p><div class="controls"><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button><span>Use arrows or keyboard</span></div></div>
         <section class="prompt-panel"><header><div><small>Prompt evolution</small><h4>From concept to final direction</h4></div><span id="prompt-count"></span></header><div id="prompts" class="prompts"></div></section>
-        <figure class="record"><header><div><small>Final generation record</small><h4>Production screenshot</h4></div><span>ChatGPT</span></header><div class="screenshot"><img id="screenshot" src="./screenshots/01-see-through.png" alt=""></div><figcaption id="caption"></figcaption></figure>
+        <figure class="record"><header><div><small>Final generation record</small><h4>Production screenshot</h4></div><span>ChatGPT</span></header><div class="screenshot loading"><img id="screenshot" src="./screenshots/01-see-through.png" alt=""><div class="media-loading screenshot-loading" aria-hidden="true"><i></i><span>Loading record</span></div></div><figcaption id="caption"></figcaption></figure>
       </article>
     </section>
   </main>
