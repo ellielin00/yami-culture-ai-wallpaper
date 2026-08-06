@@ -188,10 +188,142 @@
   to { transform: rotate(360deg); }
 }
 
+.anchor-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.3vw, 38px);
+}
+
+.anchor-nav a {
+  position: relative;
+  color: #b9b1a9;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .06em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .22s ease;
+}
+
+.anchor-nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  left: 0;
+  height: 1px;
+  background: var(--warm);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .22s ease;
+}
+
+.anchor-nav a:hover,
+.anchor-nav a:focus-visible { color: #fff; }
+.anchor-nav a:hover::after,
+.anchor-nav a:focus-visible::after { transform: scaleX(1); }
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero { order: 1; }
+.archive { order: 2; }
+.mascot-thinking { order: 3; }
+.process { order: 4; }
+.closing-cta { order: 5; }
+
+#culture-stories,
+#culture-felt,
+#design-process { scroll-margin-top: 76px; }
+
+.download-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-width: 250px;
+  padding: 17px 20px 17px 24px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 999px;
+  color: #fff;
+  background: var(--red);
+  box-shadow: 0 18px 50px rgba(241, 42, 34, .2);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .03em;
+  text-decoration: none;
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+.download-cta i {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  color: #151515;
+  background: #fff;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.download-cta:hover,
+.download-cta:focus-visible {
+  background: #ff3a31;
+  box-shadow: 0 22px 60px rgba(241, 42, 34, .32);
+  transform: translateY(-3px);
+}
+
+.hero-cta {
+  align-self: flex-start;
+  margin-top: 34px;
+}
+
+.closing-cta {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 60px;
+  min-height: 72vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 24%, rgba(241, 42, 34, .35), transparent 23rem),
+    linear-gradient(145deg, #201715, #121212 62%);
+}
+
+.closing-cta::after {
+  content: "";
+  position: absolute;
+  right: -8vw;
+  bottom: -22vw;
+  width: 44vw;
+  height: 44vw;
+  border: 1px solid rgba(255, 179, 106, .22);
+  border-radius: 50%;
+  box-shadow: 0 0 0 7vw rgba(255, 179, 106, .035), 0 0 0 14vw rgba(241, 42, 34, .025);
+  pointer-events: none;
+}
+
+.closing-cta > * { position: relative; z-index: 1; }
+.closing-cta h2 {
+  max-width: 920px;
+  margin: 0;
+  font-size: clamp(52px, 7.8vw, 118px);
+  line-height: .86;
+  letter-spacing: -.065em;
+}
+
+.section-heading:has(> div:only-child) { grid-template-columns: 1fr; }
+
 @media (max-width: 900px) {
+  .anchor-nav { display: none; }
   .thinking-grid { grid-template-columns: 1fr; }
   .film > header { align-items: start; }
   .film header > span { display: none; }
+  .closing-cta { align-items: start; flex-direction: column; justify-content: center; }
 }
 
 @media (max-width: 600px) {
@@ -205,8 +337,115 @@
   .film > header { display: block; }
   .film h3 { font-size: 38px; }
   .video-shell { border-radius: 12px; }
+  .hero-cta { width: 100%; }
+  .closing-cta { min-height: 70vh; }
+  .closing-cta .download-cta { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .media-loading i { animation: none; }
+}
+
+/* Sticky culture switcher */
+.archive .tabs {
+  position: sticky;
+  top: 76px;
+  z-index: 18;
+  background: rgba(18, 18, 18, .92);
+  backdrop-filter: blur(20px) saturate(130%);
+  -webkit-backdrop-filter: blur(20px) saturate(130%);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .18);
+}
+
+/* Closing download composition */
+.closing-cta {
+  display: grid;
+  grid-template-columns: minmax(300px, .82fr) minmax(520px, 1.18fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 100px);
+  min-height: 760px;
+}
+
+.closing-copy {
+  align-self: center;
+}
+
+.closing-copy .download-cta {
+  margin-top: 34px;
+}
+
+.wallpaper-stack {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: clamp(470px, 43vw, 650px);
+}
+
+.stack-card {
+  --rotation: 0deg;
+  position: absolute;
+  width: clamp(240px, 28vw, 460px);
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 15px;
+  background: #222;
+  box-shadow: 0 24px 55px rgba(0,0,0,.42);
+  transform: rotate(var(--rotation));
+  transform-origin: center;
+  transition: transform .34s cubic-bezier(.2,.75,.2,1), box-shadow .34s ease, filter .34s ease;
+  cursor: default;
+}
+
+.stack-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.stack-card:hover,
+.stack-card:focus-visible {
+  z-index: 30 !important;
+  outline: none;
+  transform: translateY(-18px) rotate(0deg) scale(1.055);
+  box-shadow: 0 38px 90px rgba(0,0,0,.58), 0 0 0 2px rgba(255,255,255,.7);
+  filter: saturate(1.06) brightness(1.04);
+}
+
+.stack-card-1 { left: 0;  top: 8%;  z-index: 1; --rotation: -9deg; }
+.stack-card-2 { left: 28%; top: 1%;  z-index: 2; --rotation: 5deg; }
+.stack-card-3 { right: 0; top: 17%; z-index: 3; --rotation: 10deg; }
+.stack-card-4 { left: 6%;  top: 46%; z-index: 4; --rotation: 6deg; }
+.stack-card-5 { left: 35%; top: 39%; z-index: 5; --rotation: -7deg; }
+.stack-card-6 { right: 2%; top: 52%; z-index: 6; --rotation: 7deg; }
+
+@media (max-width: 900px) {
+  .closing-cta {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .wallpaper-stack {
+    width: min(100%, 760px);
+    height: 620px;
+    margin: 10px auto 0;
+  }
+
+  .stack-card { width: min(55vw, 410px); }
+}
+
+@media (max-width: 600px) {
+  .archive .tabs { top: 66px; }
+
+  .wallpaper-stack {
+    height: 470px;
+  }
+
+  .stack-card { width: min(62vw, 300px); border-radius: 10px; }
+  .stack-card-1 { left: 0; top: 7%; }
+  .stack-card-2 { left: 28%; top: 2%; }
+  .stack-card-3 { right: 0; top: 23%; }
+  .stack-card-4 { left: 3%; top: 41%; }
+  .stack-card-5 { left: 27%; top: 48%; }
+  .stack-card-6 { right: 0; top: 62%; }
 }

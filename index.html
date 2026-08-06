@@ -10,7 +10,11 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#top"><img src="./assets/yami-logo.png" alt="Yami"><span>Yami Culture AI Wallpaper</span></a>
-    <div class="topbar-meta"><span>Six culture stories</span><i></i><span>2026</span></div>
+    <nav class="anchor-nav" aria-label="Page sections">
+      <a href="#culture-stories">Six Culture Stories</a>
+      <a href="#culture-felt">Making Culture Felt &amp; Remembered</a>
+      <a href="#design-process">Design Process</a>
+    </nav>
   </header>
   <main id="top">
     <section class="hero">
@@ -19,16 +23,18 @@
       <h1>Yami Culture<br><span>AI Wallpaper</span></h1>
       <p class="hero-copy">Six Yami values translated into cinematic worlds with Dami and Xiaomi—built through human direction, character consistency, and iterative collaboration with AI.</p>
       <p class="hero-copy zh">六条亚米文化，被转译为大米与小米共同经历的六个电影化世界。作品以人的创意与判断为主导，在持续迭代中与 AI 协作完成。</p>
+      <a class="download-cta hero-cta" href="https://drive.google.com/drive/folders/1_WLsoV_D9czsU-9rYoq5jpj2GCzghHag?usp=drive_link" target="_blank" rel="noopener noreferrer">
+        <span>Download Wallpapers</span><i aria-hidden="true">↗</i>
+      </a>
       <div class="credits">
         <article class="credit"><img class="avatar" src="./assets/erin-lin.png" alt="Erin Lin"><div><small>Created & directed by</small><strong>Erin Lin</strong><span>Concept · Art Direction · Iteration</span></div></article>
         <article class="credit"><b class="tool-icon"><img src="./assets/chatgpt-icon.svg" alt=""></b><div><small>AI tool</small><strong>ChatGPT</strong><span>Ideation · Prompting · Production archive</span></div></article>
       </div>
     </section>
 
-    <section class="mascot-thinking shell">
+    <section class="mascot-thinking shell" id="culture-felt">
       <div class="section-heading">
         <div><p class="eyebrow">Why Dami & Xiaomi</p><h2>Making Culture<br>Felt & Remembered</h2><p class="zh-heading">为什么由大米与小米演绎企业文化</p></div>
-        <p>One character system carries six values across image, motion, emotion, and sound—turning culture into a distinctive Yami experience.</p>
       </div>
       <figure class="thinking-visual">
         <img src="./assets/dami-xiaomi-emotions.png" alt="Dami and Xiaomi expressing gentle, charming, focused, and striving character moods">
@@ -48,7 +54,7 @@
       </div>
     </section>
 
-    <section class="process shell">
+    <section class="process shell" id="design-process">
       <div class="section-heading"><div><p class="eyebrow">From idea to image</p><h2>Design Process</h2><p class="zh-heading">设计流程</p></div><p>A repeatable workflow that keeps the cultural idea, mascot identity, and final visual language aligned.</p></div>
       <div class="process-grid">
         <ol class="steps">
@@ -62,8 +68,8 @@
       </div>
     </section>
 
-    <section class="archive shell">
-      <div class="section-heading"><div><p class="eyebrow">The collection</p><h2>Six Culture Stories</h2><p class="zh-heading">六个文化故事</p></div><p>Choose a value to reveal its artwork, story, prompt evolution, and final generation record.</p></div>
+    <section class="archive shell" id="culture-stories">
+      <div class="section-heading"><div><p class="eyebrow">The collection</p><h2>Six Culture Stories</h2><p class="zh-heading">六个文化故事</p></div></div>
       <nav class="tabs" aria-label="Culture wallpapers">
         <button class="tab active" data-index="0"><span>01</span>Customer’s Eyes</button>
         <button class="tab" data-index="1"><span>02</span>Empathy</button>
@@ -73,8 +79,14 @@
         <button class="tab" data-index="5"><span>06</span>Move Together</button>
       </nav>
       <article class="stage" aria-live="polite">
+        <div class="visual loading">
+          <img id="artwork" src="./artworks/01-see-through.png" alt="">
+          <div class="media-loading artwork-loading" aria-hidden="true"><i></i><span>Loading artwork</span></div>
+          <span id="counter">01 / 06</span>
+        </div>
+        <div class="story"><p id="value" class="value"></p><h3 id="title-en"></h3><p id="title-cn" class="title-cn"></p><p id="desc-en"></p><p id="desc-cn" class="zh"></p><div class="controls"><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button><span>Use arrows or keyboard</span></div></div>
         <section class="film">
-          <header><div><small>Watch the culture story</small><h3>From wallpaper to motion</h3><p>Play the short film first—the value is revealed through action, then sealed with Yami's signature sound.</p></div><span>VIDEO · SOUND ON</span></header>
+          <header><div><small>Watch the culture story</small><h3>From wallpaper to motion</h3></div><span>VIDEO · SOUND ON</span></header>
           <div class="video-shell loading">
             <video id="culture-video" controls playsinline preload="metadata" poster="./artworks/01-see-through.png">
               <source id="video-source" src="./videos/01-see-through.mp4" type="video/mp4">
@@ -82,15 +94,27 @@
             <div class="video-loading media-loading" aria-hidden="true"><i></i><span>Loading film</span></div>
           </div>
         </section>
-        <div class="visual loading">
-          <img id="artwork" src="./artworks/01-see-through.png" alt="">
-          <div class="media-loading artwork-loading" aria-hidden="true"><i></i><span>Loading artwork</span></div>
-          <span id="counter">01 / 06</span>
-        </div>
-        <div class="story"><p id="value" class="value"></p><h3 id="title-en"></h3><p id="title-cn" class="title-cn"></p><p id="desc-en"></p><p id="desc-cn" class="zh"></p><div class="controls"><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button><span>Use arrows or keyboard</span></div></div>
         <section class="prompt-panel"><header><div><small>Prompt evolution</small><h4>From concept to final direction</h4></div><span id="prompt-count"></span></header><div id="prompts" class="prompts"></div></section>
         <figure class="record"><header><div><small>Final generation record</small><h4>Production screenshot</h4></div><span>ChatGPT</span></header><div class="screenshot loading"><img id="screenshot" src="./screenshots/01-see-through.png" alt=""><div class="media-loading screenshot-loading" aria-hidden="true"><i></i><span>Loading record</span></div></div><figcaption id="caption"></figcaption></figure>
       </article>
+    </section>
+    <section class="closing-cta shell" aria-label="Download Yami culture wallpapers">
+      <div class="closing-copy">
+        <p class="eyebrow">Bring the culture with you</p>
+        <h2>Download the<br>Wallpaper Collection</h2>
+        <p class="zh-heading">下载完整亚米文化壁纸系列</p>
+        <a class="download-cta" href="https://drive.google.com/drive/folders/1_WLsoV_D9czsU-9rYoq5jpj2GCzghHag?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          <span>Download Wallpapers</span><i aria-hidden="true">↗</i>
+        </a>
+      </div>
+      <div class="wallpaper-stack" aria-label="Six Yami culture wallpapers">
+        <figure class="stack-card stack-card-1" tabindex="0"><img src="./artworks/01-see-through.png" alt="See Through the Customer’s Eyes wallpaper"></figure>
+        <figure class="stack-card stack-card-2" tabindex="0"><img src="./artworks/02-empathy.png" alt="Empathy in Everything We Do wallpaper"></figure>
+        <figure class="stack-card stack-card-3" tabindex="0"><img src="./artworks/03-relentless.png" alt="Relentless Drive wallpaper"></figure>
+        <figure class="stack-card stack-card-4" tabindex="0"><img src="./artworks/04-think-beyond.png" alt="Think Beyond Limits, Dive Deep to Solve wallpaper"></figure>
+        <figure class="stack-card stack-card-5" tabindex="0"><img src="./artworks/05-own-outcome.png" alt="Do What’s Right, Own the Outcome wallpaper"></figure>
+        <figure class="stack-card stack-card-6" tabindex="0"><img src="./artworks/06-move-together.png" alt="Move Fast, Move Together wallpaper"></figure>
+      </div>
     </section>
   </main>
   <footer><img src="./assets/yami-logo.png" alt=""><p>Yami Culture AI Wallpaper <b>·</b> Created by Erin Lin</p></footer>
